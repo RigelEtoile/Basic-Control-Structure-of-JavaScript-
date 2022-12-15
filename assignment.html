@@ -29,9 +29,9 @@
 		else
 			document.getElementById("out1").innerHTML = "Prime : No";
         var tmp = x;
-        do
-            			document.getElementById("out2").innerHTML = (tmp - x + 1);
+			
          while(prime(++tmp) != 0);        //use of do while
+document.getElementById("out2").innerHTML = (tmp - x);
         document.getElementById("out3").innerHTML = 'Recursive Counter: ';
         counter();
         function counter()  // Example of recursion and closure

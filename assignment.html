@@ -30,7 +30,11 @@
 			document.getElementById("out1").innerHTML = "Prime : No";
         var tmp = x;
 			
-         while(prime(++tmp) != 0);        //use of do while
+         while(prime(++tmp) != 0)      //use of do while
+          {
+continue;
+document.getElementById("out1").innerHTML = "Hello Coders";
+}
 document.getElementById("out2").innerHTML = (tmp - x);
         document.getElementById("out3").innerHTML = 'Recursive Counter: ';
         counter();

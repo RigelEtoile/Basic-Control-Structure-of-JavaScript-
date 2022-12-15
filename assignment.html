@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>
+        Assignment Test
+    </title>
+    </head>
+    <body>
+        <p>input some integer</p>
+        <input type="number" id="num" value=""/>
+        <input type="button" id="btn" value="Enter" onclick="fun()">
+        <p id="out"></p>
+        <p id="out1"></p>
+        <p id="out2"></p>
+        <p id="out3" style="font-weight: bold;"></p>
+<script>
+    function fun(){
+                    var x = document.getElementById("num").value;  // Implementation of getElementById
+        if(x%2 == 0)    // Use of if
+            document.getElementById("out").innerHTML = "Type : Even";
+        else            // Use of else
+            document.getElementById("out").innerHTML = "Type : Odd";
+        	if(prime(x) == 0)
+			document.getElementById("out1").innerHTML = "Prime : Yes";
+		else
+			document.getElementById("out1").innerHTML = "Prime : No";
+        var tmp = x;
+        do
+            			document.getElementById("out2").innerHTML = (tmp - x + 1);
+         while(prime(++tmp) != 0);        //use of do while
+        document.getElementById("out3").innerHTML = 'Recursive Counter: ';
+        counter();
+        function counter()  // Example of recursion and closure
+          {
+              if(x < 0 || x == 0)
+                  return true;
+              else 
+                  {
+                      document.getElementById("out3").innerHTML += x.toString() + '    ';
+                      --x;
+                      counter();
+                  }
+          }
+    }
+    
+    // Prime Number detection logic
+            function prime(x){
+                        var i,flag=0;
+		for(i=2; i <= x/2; i++)
+		{
+			if(x%i == 0)
+			{
+				flag = 1;
+				break;
+			}
+		}
+                return flag;
+        }
+ 
+        </script>
+    </body>
+</html>

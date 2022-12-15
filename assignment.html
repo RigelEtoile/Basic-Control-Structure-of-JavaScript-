@@ -15,10 +15,15 @@
 <script>
     function fun(){
                     var x = document.getElementById("num").value;  // Implementation of getElementById
-        if(x%2 == 0)    // Use of if
+            switch(x%2)    // Use of switch
+           {
+            case 0:
             document.getElementById("out").innerHTML = "Type : Even";
-        else            // Use of else
+            break;
+            case 1:    
             document.getElementById("out").innerHTML = "Type : Odd";
+            break;
+           }
         	if(prime(x) == 0)
 			document.getElementById("out1").innerHTML = "Prime : Yes";
 		else
@@ -31,9 +36,9 @@
         counter();
         function counter()  // Example of recursion and closure
           {
-              if(x < 0 || x == 0)
+              if(x < 0 || x == 0)  // use of if
                   return true;
-              else 
+              else          // use of else
                   {
                       document.getElementById("out3").innerHTML += x.toString() + '    ';
                       --x;
